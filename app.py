@@ -16,7 +16,7 @@ from sklearn.decomposition import PCA
 st.set_page_config(page_title="K-Means Clustering App with Iris", layout="centered")
 
 # App title
-st.markdown("<h1 style='text-align: center;'>🔍 K-Means Clustering App with Iris Dataset</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>🔍 K-Means Clustering App with Iris Dataset by Rungnapa Samaksaman</h1>", unsafe_allow_html=True)
 
 # Sidebar
 st.sidebar.header("Configure Clustering")
