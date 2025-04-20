@@ -29,12 +29,17 @@ X, _ = make_blobs(n_samples=300, centers=loaded_model.n_clusters, cluster_std=0.
 # Predict using the loaded model
 y_kmeans = loaded_model.predict(X)
 
-# Plot the result
-fig, ax = plt.subplots()
-ax.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=50, cmap='viridis')
-centers = loaded_model.cluster_centers_
-ax.scatter(centers[:, 0], centers[:, 1], c='red', s=200, alpha=0.75, marker='o', label='Centroids')
-ax.legend()
+# Plot
+plt.figure(figsize=(8, 6))
+plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=50, cmap='viridis')
 
-# Show the plot
-st.pyplot(fig)
+# Plot centroids
+centers = loaded_model.cluster_centers_
+plt.scatter(centers[:, 0], centers[:, 1], c='red', s=300, alpha=0.9, label='Centroids')
+
+# Add legend and title
+plt.title("k-Means Clustering")
+plt.legend(loc='upper right')
+
+# Show in Streamlit
+st.pyplot(plt)
