@@ -19,7 +19,7 @@ st.set_page_config(page_title="K-Means Clustering App with Iris", layout="center
 st.markdown("<h1 style='text-align: center;'>🔍 K-Means Clustering App with Iris Dataset</h1>", unsafe_allow_html=True)
 
 # Sidebar
-st.sidebar.header("⚙️ Configure Clustering")
+st.sidebar.header("Configure Clustering")
 k = st.sidebar.slider("Select number of clusters (K)", min_value=2, max_value=10, value=3)
 
 # Load Iris dataset
